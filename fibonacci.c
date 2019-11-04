@@ -5,8 +5,8 @@
 
 int main()
 {
-    int i;
-    for(i=0; i < NUM_ELEMENTS; i++)
+    __uint32_t i;
+    for(i=1; i < NUM_ELEMENTS; i++)
     {
         printf("%u\t", fibonacci(i));
     }
@@ -15,6 +15,7 @@ int main()
 
 __uint32_t fibonacci(__uint32_t n)
 {
+    //first two values are 1
     if (n == 1 || n == 2)
     {
         return 1;
@@ -22,6 +23,7 @@ __uint32_t fibonacci(__uint32_t n)
 
     else
     {
+        //recursive return of previous two values
         return (fibonacci(n-1) + fibonacci(n-2));
     }
 }
